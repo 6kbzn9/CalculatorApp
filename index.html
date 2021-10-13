@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-  
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Calculator app</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="header__logo">calc</h1>
+        <div class="header__theme">
+          <div class="header__theme__numbers">
+            <span class="header__theme__number">1</span>
+            <span class="header__theme__number">2</span>
+            <span class="header__theme__number">3</span>
+          </div>
+          <div class="header__theme__wrapper">
+            <p class="header__theme__title">theme</p>
+            <div class="header__theme__container">
+              <label for="theme0" class="header__theme__label"></label>
+              <input
+                type="radio"
+                class="header__theme__theme"
+                id="theme0"
+                name="theme"
+              />
+              <label for="theme1" class="header__theme__label"></label>
+              <input
+                type="radio"
+                class="header__theme__theme"
+                id="theme1"
+                name="theme"
+              />
+              <label for="theme2" class="header__theme__label"></label>
+              <input
+                type="radio"
+                class="header__theme__theme"
+                id="theme2"
+                name="theme"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
