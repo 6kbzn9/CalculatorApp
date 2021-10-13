@@ -79,7 +79,7 @@ body {
   font-size: 3.2rem;
   background-color: var(--main-bg);
 
-  @include bigger(700px) {
+  @include bigger(450px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,11 +89,8 @@ body {
 .wrapper {
   width: 90%;
   margin: 0 auto;
-  max-width: 540px;
+  max-width: 450px;
   padding: 3rem 0;
-  @include bigger(700px) {
-    padding: 0rem 0;
-  }
 }
 .header {
   display: flex;
@@ -164,6 +161,14 @@ body {
   font-size: 3.2rem;
   color: var(--header-clr);
   margin-bottom: 2rem;
+  @include bigger(450px) {
+    height: 10.5rem;
+    font-size: 3.75rem;
+  }
+  @include bigger(450px) {
+    height: 12rem;
+    font-size: 4.2rem;
+  }
 }
 
 .keypad {
@@ -175,6 +180,9 @@ body {
   border-radius: 1rem;
   grid-gap: 1.5rem;
 
+  @include bigger(450px) {
+    grid-gap: 2rem;
+  }
   &__key {
     display: flex;
     justify-content: center;
@@ -188,6 +196,9 @@ body {
     cursor: pointer;
     border: none;
     font-family: inherit;
+    @include bigger(550px) {
+      font-size: 2.725rem;
+    }
     &:active {
       transform: scale(0.9);
     }

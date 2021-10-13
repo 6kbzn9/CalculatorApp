@@ -75,7 +75,7 @@ body {
   background-color: var(--main-bg);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 450px) {
   body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -93,14 +93,8 @@ body {
 .wrapper {
   width: 90%;
   margin: 0 auto;
-  max-width: 540px;
+  max-width: 450px;
   padding: 3rem 0;
-}
-
-@media (min-width: 700px) {
-  .wrapper {
-    padding: 0rem 0;
-  }
 }
 
 .header {
@@ -208,6 +202,20 @@ body {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 450px) {
+  .screen {
+    height: 10.5rem;
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 450px) {
+  .screen {
+    height: 12rem;
+    font-size: 4.2rem;
+  }
+}
+
 .keypad {
   width: 100%;
   display: -ms-grid;
@@ -218,6 +226,12 @@ body {
   padding: 2.5rem;
   border-radius: 1rem;
   grid-gap: 1.5rem;
+}
+
+@media (min-width: 450px) {
+  .keypad {
+    grid-gap: 2rem;
+  }
 }
 
 .keypad__key {
@@ -240,6 +254,12 @@ body {
   cursor: pointer;
   border: none;
   font-family: inherit;
+}
+
+@media (min-width: 550px) {
+  .keypad__key {
+    font-size: 2.725rem;
+  }
 }
 
 .keypad__key:active {
