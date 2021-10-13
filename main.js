@@ -1,3 +1,4 @@
+// -------------------theme-toggle---------------
 const inputs = document.querySelectorAll(".header__theme__theme");
 const labels = document.querySelectorAll(".header__theme__label");
 const doc = document.documentElement;
@@ -27,3 +28,12 @@ inputs.forEach((input, index) => {
     setTheme(index);
   });
 });
+
+// --------------------calculation------------------
+const numbers = document.querySelectorAll(".num");
+const operators = document.querySelectorAll(".operator");
+const deleteBtn = document.querySelector(".delete");
+const reset = document.querySelector(".reset");
+const result = document.querySelector(".result");
+const screen = document.querySelector("#screen");
+let operated = screen.innerText;

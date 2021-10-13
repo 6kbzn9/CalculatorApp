@@ -55,27 +55,33 @@
           </div>
         </div>
       </header>
-      <section class="screen" id="screen">399,981</section>
-      <section class="keypad">
-        <div class="keypad__key keypad__key--num">7</div>
-        <div class="keypad__key keypad__key--num">8</div>
-        <div class="keypad__key keypad__key--num">9</div>
-        <div class="keypad__key keypad__key--spe">del</div>
-        <div class="keypad__key keypad__key--num">4</div>
-        <div class="keypad__key keypad__key--num">5</div>
-        <div class="keypad__key keypad__key--num">6</div>
-        <div class="keypad__key keypad__key--ope">+</div>
-        <div class="keypad__key keypad__key--num">1</div>
-        <div class="keypad__key keypad__key--num">2</div>
-        <div class="keypad__key keypad__key--num">3</div>
-        <div class="keypad__key keypad__key--ope">-</div>
-        <div class="keypad__key keypad__key--num">.</div>
-        <div class="keypad__key keypad__key--num">0</div>
-        <div class="keypad__key keypad__key--ope">/</div>
-        <div class="keypad__key keypad__key--num">x</div>
-        <div class="keypad__key keypad__key--spe keypad__key--span">reset</div>
-        <div class="keypad__key keypad__key--result keypad__key--span">=</div>
-      </section>
+      <section class="screen" id="screen"></section>
+      <form action="#" class="keypad">
+        <button class="keypad__key num">7</button>
+        <button class="keypad__key num">8</button>
+        <button class="keypad__key num">9</button>
+        <button class="keypad__key keypad__key--spe delete">del</button>
+        <button class="keypad__key num">4</button>
+        <button class="keypad__key num">5</button>
+        <button class="keypad__key num">6</button>
+        <button class="keypad__key operator">+</button>
+        <button class="keypad__key num">1</button>
+        <button class="keypad__key num">2</button>
+        <button class="keypad__key num">3</button>
+        <button class="keypad__key operator">-</button>
+        <button class="keypad__key num">.</button>
+        <button class="keypad__key num">0</button>
+        <button class="keypad__key operator">/</button>
+        <button class="keypad__key operator">x</button>
+        <button class="keypad__key keypad__key--spe keypad__key--span reset">
+          reset
+        </button>
+        <button
+          class="keypad__key keypad__key--result keypad__key--span result"
+        >
+          =
+        </button>
+      </form>
     </div>
     <script src="main.js"></script>
   </body>

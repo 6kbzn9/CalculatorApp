@@ -217,6 +217,8 @@ body {
           box-shadow: 0 5px var(--key-shadow-3);
   font-size: 2.5rem;
   cursor: pointer;
+  border: none;
+  font-family: inherit;
 }
 
 .keypad__key:active {
