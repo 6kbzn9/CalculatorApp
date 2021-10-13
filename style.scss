@@ -78,12 +78,22 @@ body {
   font-family: "Spartan", sans-serif;
   font-size: 3.2rem;
   background-color: var(--main-bg);
+
+  @include bigger(700px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
 }
 .wrapper {
   width: 90%;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 540px;
   padding: 3rem 0;
+  @include bigger(700px) {
+    padding: 0rem 0;
+  }
 }
 .header {
   display: flex;
