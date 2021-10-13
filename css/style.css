@@ -81,6 +81,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: var(--header-clr);
+  margin-bottom: 3rem;
 }
 
 .header__logo {
@@ -92,17 +93,17 @@ body {
 }
 
 .header__theme__numbers {
-  width: var(--width);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: var(--width);
   margin-bottom: 0.5rem;
   margin-left: auto;
-  padding: 0 1.125rem;
-  font-size: 1.25rem;
+  padding: 0 1rem;
+  font-size: 1.225rem;
 }
 
 .header__theme__wrapper {
@@ -135,7 +136,7 @@ body {
           align-items: center;
   background-color: var(--toggle-bg);
   border-radius: 2rem;
-  padding: 0 0.675rem;
+  padding: 0 0.5rem;
 }
 
 .header__theme__theme {
@@ -143,8 +144,8 @@ body {
 }
 
 .header__theme__label {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.625rem;
+  height: 1.625rem;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
@@ -152,5 +153,24 @@ body {
 
 .header__theme__label--checked {
   background-color: var(--key-bg-2);
+}
+
+.screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 9rem;
+  padding: 0 3rem;
+  border-radius: 1rem;
+  background-color: var(--screen-bg);
+  font-size: 3.2rem;
+  color: var(--header-clr);
 }
 /*# sourceMappingURL=style.css.map */
