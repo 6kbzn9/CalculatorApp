@@ -30,10 +30,53 @@ inputs.forEach((input, index) => {
 });
 
 // --------------------calculation------------------
-const numbers = document.querySelectorAll(".num");
-const operators = document.querySelectorAll(".operator");
-const deleteBtn = document.querySelector(".delete");
-const reset = document.querySelector(".reset");
-const result = document.querySelector(".result");
+const keys = document.querySelectorAll(".keypad__key");
 const screen = document.querySelector("#screen");
-let operated = screen.innerText;
+keys.forEach((key) => {
+  key.addEventListener("click", (e) => {
+    let value = screen.innerText;
+    let last = value.length - 1;
+    last = screen.innerText[last];
+
+    const checkLast = () => {
+      if (last === "+" || last === "-" || last === "*" || last === "/") {
+        screen.innerText = screen.innerText.slice(0, -1);
+      }
+      if (value === "") screen.innerText = "0";
+      screen.innerText += e.target.innerText;
+    };
+    switch (e.target.innerText) {
+      case "RESET":
+        screen.innerText = "";
+        break;
+      case "=":
+        try {
+          screen.innerText = eval(screen.innerText);
+        } catch {
+          screen.innerText = "ERROR";
+        }
+        break;
+      case "DEL":
+        screen.innerText = screen.innerText.slice(0, -1);
+        break;
+      case ".":
+        if (last === ".") return;
+        screen.innerText += e.target.innerText;
+        break;
+      case "+":
+        checkLast();
+        break;
+      case "-":
+        checkLast();
+        break;
+      case "*":
+        checkLast();
+        break;
+      case "/":
+        checkLast();
+        break;
+      default:
+        screen.innerText += e.target.innerText;
+    }
+  });
+});
