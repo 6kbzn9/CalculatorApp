@@ -5,7 +5,7 @@
   --screen-bg: hsl(224, 36%, 15%);
   --header-clr: hsl(0, 0%, 100%);
   --key-clr: hsl(221, 14%, 31%);
-  --key-clr--2: hsl(0, 0%, 100%);
+  --key-clr-2: hsl(0, 0%, 100%);
   //   keys
   --key-bg-1: hsl(225, 21%, 49%);
   --key-shadow-1: hsl(224, 28%, 35%);
@@ -27,7 +27,7 @@
   --key-bg-1: hsl(185, 42%, 37%);
   --key-shadow-1: hsl(185, 58%, 25%);
   --key-bg-2: hsl(25, 98%, 40%);
-  ---key-shadow-2: hsl(25, 99%, 27%);
+  --key-shadow-2: hsl(25, 99%, 27%);
   --key-bg-3: hsl(45, 7%, 89%);
   --key-shadow-3: hsl(35, 11%, 61%);
 }
@@ -44,9 +44,20 @@
   --key-bg-1: hsl(281, 89%, 26%);
   --key-shadow-1: hsl(285, 91%, 52%);
   --key-bg-2: hsl(176, 100%, 44%);
-  ---key-shadow-2: hsl(177, 92%, 70%);
+  --key-shadow-2: hsl(177, 92%, 70%);
   --key-bg-3: hsl(268, 47%, 21%);
   --key-shadow-3: hsl(290, 70%, 36%);
+}
+// --------------mixins------------------
+@mixin smaller($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+@mixin bigger($width) {
+  @media (min-width: $width) {
+    @content;
+  }
 }
 
 * {
@@ -56,6 +67,12 @@
 }
 html {
   font-size: 62.5%;
+  @include smaller(355px) {
+    font-size: 59%;
+  }
+  @include smaller(355px) {
+    font-size: 56%;
+  }
 }
 body {
   font-family: "Spartan", sans-serif;
@@ -136,4 +153,47 @@ body {
   background-color: var(--screen-bg);
   font-size: 3.2rem;
   color: var(--header-clr);
+  margin-bottom: 2rem;
+}
+
+.keypad {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--keypad-bg);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  grid-gap: 1.5rem;
+
+  &__key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--key-clr);
+    background-color: var(--key-bg-3);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    box-shadow: 0 5px var(--key-shadow-3);
+    font-size: 2.5rem;
+    cursor: pointer;
+    &:active {
+      transform: scale(0.9);
+    }
+
+    &--spe {
+      box-shadow: 0 5px var(--key-shadow-1);
+      background-color: var(--key-bg-1);
+      color: var(--key-clr-2);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+    &--result {
+      box-shadow: 0 5px var(--key-shadow-2);
+      background-color: var(--key-bg-2);
+      color: var(--key-clr-2);
+    }
+    &--span {
+      grid-column: span 2;
+    }
+  }
 }

@@ -5,7 +5,7 @@
   --screen-bg: hsl(224, 36%, 15%);
   --header-clr: hsl(0, 0%, 100%);
   --key-clr: hsl(221, 14%, 31%);
-  --key-clr--2: hsl(0, 0%, 100%);
+  --key-clr-2: hsl(0, 0%, 100%);
   --key-bg-1: hsl(225, 21%, 49%);
   --key-shadow-1: hsl(224, 28%, 35%);
   --key-bg-2: hsl(6, 63%, 50%);
@@ -25,7 +25,7 @@
   --key-bg-1: hsl(185, 42%, 37%);
   --key-shadow-1: hsl(185, 58%, 25%);
   --key-bg-2: hsl(25, 98%, 40%);
-  ---key-shadow-2: hsl(25, 99%, 27%);
+  --key-shadow-2: hsl(25, 99%, 27%);
   --key-bg-3: hsl(45, 7%, 89%);
   --key-shadow-3: hsl(35, 11%, 61%);
 }
@@ -41,7 +41,7 @@
   --key-bg-1: hsl(281, 89%, 26%);
   --key-shadow-1: hsl(285, 91%, 52%);
   --key-bg-2: hsl(176, 100%, 44%);
-  ---key-shadow-2: hsl(177, 92%, 70%);
+  --key-shadow-2: hsl(177, 92%, 70%);
   --key-bg-3: hsl(268, 47%, 21%);
   --key-shadow-3: hsl(290, 70%, 36%);
 }
@@ -55,6 +55,18 @@
 
 html {
   font-size: 62.5%;
+}
+
+@media (max-width: 355px) {
+  html {
+    font-size: 59%;
+  }
+}
+
+@media (max-width: 355px) {
+  html {
+    font-size: 56%;
+  }
 }
 
 body {
@@ -172,5 +184,63 @@ body {
   background-color: var(--screen-bg);
   font-size: 3.2rem;
   color: var(--header-clr);
+  margin-bottom: 2rem;
+}
+
+.keypad {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  background-color: var(--keypad-bg);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  grid-gap: 1.5rem;
+}
+
+.keypad__key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--key-clr);
+  background-color: var(--key-bg-3);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  -webkit-box-shadow: 0 5px var(--key-shadow-3);
+          box-shadow: 0 5px var(--key-shadow-3);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.keypad__key:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.keypad__key--spe {
+  -webkit-box-shadow: 0 5px var(--key-shadow-1);
+          box-shadow: 0 5px var(--key-shadow-1);
+  background-color: var(--key-bg-1);
+  color: var(--key-clr-2);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.keypad__key--result {
+  -webkit-box-shadow: 0 5px var(--key-shadow-2);
+          box-shadow: 0 5px var(--key-shadow-2);
+  background-color: var(--key-bg-2);
+  color: var(--key-clr-2);
+}
+
+.keypad__key--span {
+  grid-column: span 2;
 }
 /*# sourceMappingURL=style.css.map */
