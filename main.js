@@ -44,13 +44,13 @@ keys.forEach((key) => {
         screen.innerText = screen.innerText.slice(0, -1);
       }
       if (value === "") screen.innerText = "0";
-      screen.innerText += e.target.innerText;
     };
     switch (e.target.innerText) {
       case "RESET":
         screen.innerText = "";
         break;
       case "=":
+        checkLast();
         try {
           screen.innerText = eval(screen.innerText);
         } catch {
@@ -62,19 +62,24 @@ keys.forEach((key) => {
         break;
       case ".":
         if (last === ".") return;
+        if (value === "") screen.innerText = "0";
         screen.innerText += e.target.innerText;
         break;
       case "+":
         checkLast();
+        screen.innerText += e.target.innerText;
         break;
       case "-":
         checkLast();
+        screen.innerText += e.target.innerText;
         break;
       case "*":
         checkLast();
+        screen.innerText += e.target.innerText;
         break;
       case "/":
         checkLast();
+        screen.innerText += e.target.innerText;
         break;
       default:
         screen.innerText += e.target.innerText;
