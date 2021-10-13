@@ -34,6 +34,7 @@ const keys = document.querySelectorAll(".keypad__key");
 const screen = document.querySelector("#screen");
 keys.forEach((key) => {
   key.addEventListener("click", (e) => {
+    e.preventDefault();
     let value = screen.innerText;
     let last = value.length - 1;
     last = screen.innerText[last];
